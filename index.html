@@ -13,112 +13,104 @@
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            line-height: 1.6;
             margin: 0;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
         }
         header {
-            background: linear-gradient(135deg, #161b22, #21262d);
+            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
             text-align: center;
-            padding: 100px 20px;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         header h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #58a6ff;
-            animation: fadeInDown 2s ease;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
         header p {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            color: #8b949e;
-            animation: fadeInUp 2s ease;
+            font-size: 1.5rem;
+            max-width: 600px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(13, 17, 23, 0.9);
+            background: #333;
+            color: #fff;
             padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: center;
         }
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            gap: 20px;
         }
         nav ul li {
             display: inline;
         }
         nav ul li a {
-            color: #c9d1d9;
+            color: #fff;
             text-decoration: none;
             font-size: 1rem;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
         nav ul li a:hover {
             color: #58a6ff;
         }
-        section {
-            padding: 80px 20px;
+        .container {
             max-width: 1200px;
             margin: auto;
+            padding: 20px;
         }
-        .container {
+        .main-section {
+            margin: 40px 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
         .card {
-            background: #161b22;
+            background: #292929;
             padding: 20px;
-            border-radius: 12px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
-        .card h2, .card h3 {
+        .card h3 {
             color: #58a6ff;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .card p {
-            color: #8b949e;
+            margin-bottom: 10px;
         }
         .card a {
-            display: inline-block;
-            margin-top: 10px;
             color: #58a6ff;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
         }
         .card a:hover {
             color: #1f6feb;
         }
-        .tech-image {
-            width: 100%;
-            border-radius: 8px;
-            margin-top: 15px;
-            transform: scale(1);
-            transition: transform 0.3s;
-        }
-        .card:hover .tech-image {
-            transform: scale(1.1);
-        }
         footer {
-            background: #161b22;
+            background: #111;
+            color: #888;
             text-align: center;
-            padding: 20px;
-            color: #8b949e;
+            padding: 20px 0;
+            margin-top: 40px;
         }
         footer a {
             color: #58a6ff;
@@ -127,48 +119,15 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #21262d;
-            color: #58a6ff;
-            border: none;
-            padding: 12px 18px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            font-size: 1.5rem;
-        }
-        .scroll-top.show {
-            display: block;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>Kartik Kalra</h1>
+        <p>Big Data Solution Architect | AI Enthusiast | Machine Learning Practitioner</p>
+    </header>
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -178,39 +137,30 @@
         </ul>
     </nav>
 
-    <header>
-        <h1>Kartik Kalra</h1>
-        <p>Big Data Solution Architect | AI Enthusiast | Machine Learning Practitioner</p>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <div class="card">
-                <h2>About Me</h2>
-                <p>Hello! I'm Kartik Kalra, a Big Data Solution Architect passionate about artificial intelligence, machine learning, and cloud technologies. I specialize in data analytics, predictive modeling, and cloud computing. Currently, I am enhancing my skills in AI at Humber Polytechnic, Toronto.</p>
-            </div>
-        </div>
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm Kartik Kalra, a Big Data Solution Architect passionate about artificial intelligence, machine learning, and cloud technologies. I specialize in data analytics, predictive modeling, and cloud computing. Currently, I am enhancing my skills in AI at Humber Polytechnic, Toronto.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="container">
         <h2>Projects</h2>
-        <div class="container">
+        <div class="main-section">
             <div class="card">
                 <h3>ParkSpot App</h3>
                 <p>A Flask-based web application for parking spot reservations with Google Maps integration and payment processing.</p>
                 <a href="https://github.com/kalrakk/ParkSpotApp" target="_blank">View Project</a>
             </div>
             <div class="card">
-                <h3>Online Purchase Risk Analysis</h3>
+                <h3>Predictive Analysis of Online Purchase Orders</h3>
                 <p>A machine learning model to classify risks associated with online purchase orders using Python and scikit-learn.</p>
                 <a href="https://github.com/kalrakk/Predictive-Analysis-of-Online-Purchase-Orders-Risk-Classification-Using-Machine-Learning" target="_blank">View Project</a>
             </div>
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="container">
         <h2>Skills</h2>
-        <div class="container">
+        <div class="main-section">
             <div class="card">
                 <h3>Programming Languages</h3>
                 <p>Python, R, PL/SQL, C++, C</p>
@@ -230,7 +180,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:kkalra.work97@gmail.com">kkalra.work97@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/kalrakk97" target="_blank">linkedin.com/in/kalrakk97</a></p>
@@ -240,22 +190,5 @@
         <p>&copy; 2024 Kartik Kalra. All Rights Reserved.</p>
     </footer>
 
-    <button class="scroll-top" id="scrollTopBtn">&#8679;</button>
-
-    <script>
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('show');
-            } else {
-                scrollTopBtn.classList.remove('show');
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
 </body>
 </html>
